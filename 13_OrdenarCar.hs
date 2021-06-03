@@ -1,5 +1,5 @@
 import Data.List
 
-main = do
+ordenarCarTexto = do
     let strs = "mi pc"
     putStrLn $ "Ordenado: " ++ sort strs

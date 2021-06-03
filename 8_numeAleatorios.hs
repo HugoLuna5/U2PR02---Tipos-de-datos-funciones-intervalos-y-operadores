@@ -1,11 +1,8 @@
-import System.Random
+import System.Random (randomRIO)
 
-randoms' :: (RandomGen g, Random a) => g -> [a]
-randoms' g = x : randoms' g'
-  where (x, g') = random g
-
-finitaAleatoria :: (RandomGen g, Random a, Num n, Eq n) => n -> g -> ([a], g)
-finitaAleatoria 0 g = ([], g)
-finitaAleatoria n g = (x:xs, g2)
-  where (x, g1)  = random g
-        (xs, g2) = finitaAleatoria (n-1) g1
+listaNúmerosAleatorios :: Int -> IO([Int])
+listaNúmerosAleatorios 0 = return []
+listaNúmerosAleatorios n = do
+  r  <- randomRIO (1,9999999)
+  rs <- listaNúmerosAleatorios (n-1)
+  return (r:rs) 

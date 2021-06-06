@@ -1,7 +1,7 @@
-
+module Digito where
 
 import Data.List
 cifras :: Integer -> [Int]
 cifras n = [read [d] | d <- show n]
 
-últimoDígitoDe x = last (cifras(x))
+ultimoDigitoDe x = last (cifras(x))

@@ -1,7 +1,7 @@
 import System.IO
 import System.Exit
 import Control.Monad
-import ultimoDig
+import Digito
 
 
 funcionIntegradoraU2PR2 = forever (printMenu >> readChoice >>= menuAction)
@@ -10,7 +10,7 @@ printMenu = putStr "\n1)Ejercicio 01: Último dígito de un número'\n2)Ejercici
 
 readChoice = hSetBuffering stdin NoBuffering >> hSetEcho stdin False >> getChar
 
-menuAction '1' = últimoDígitoDe
+menuAction '1' = ultimoDigitoDe
 menuAction '2' = exitSuccess
 menuAction '3' = exitSuccess
 menuAction '4' = exitSuccess

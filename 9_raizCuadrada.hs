@@ -7,8 +7,6 @@ isqrt = floor . sqrt . fromIntegral
 --Verify perfect square root
 is_square x = sq * sq == x
     where sq = floor $ sqrt $ (fromIntegral x::Double)
-
-
 --Generate list of values and print if is perfect square root
     -- Structure
     -- Number 
